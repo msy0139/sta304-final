@@ -1,0 +1,61 @@
+---
+title: "How the 2019 Federal election result would be different if everyone voted"
+author: "Siyi Ma"
+date: "2020/12/19"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(janitor)
+library(tidyverse)
+library(devtools)
+library(cesR)
+
+get_ces("ces2019_web")
+ces2019 <- ces2019_web %>% 
+  select(cps19_province, 
+         cps19_education ,
+         cps19_votechoice_7_TEXT)
+
+```
+
+
+## Introduction
+The 2019 Canadian election held on 21st Oct was a historical political event in the
+spotlight. The Liberal Party led by Justin Trudeau won 157 seats in the House of
+Commons and form a minority government. However, the voter turnout rate in
+2019 was 66% and it was lower than the mean value of historical data. Since low
+voter turnout rate could lead to an election result misrepresenting the expectation
+of majorities, I will build linear regression model on a census dataset and use this model to
+estimate the election result with the gss data set. The linear regression model will be 
+used to predict voting intentions based on several important factors of the individual, 
+for instance, income level, education and information channels. With the method
+of post stratification, I can simulate the election result with high turnout rate and
+check if it is consistent with the historical result. 
+
+## Methodology
+The Multilevel regression with post stratification is a popular technique to analyze survey 
+responses and predict election results. 
+## Model
+
+## Results
+
+## Discussion
+
+## Reference
+[1] Stephenson, Laura B; Harell, Allison; Rubenson, Daniel; Loewen, Peter John, 2020, “2019 Canadian Election Study - Online Survey”, https://doi.org/10.7910/DVN/DUS88V, Harvard Dataverse, V1
+
+
+
+
+
+
+
+
+
+
+
+
+
